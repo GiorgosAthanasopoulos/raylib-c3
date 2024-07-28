@@ -736,3 +736,8 @@ extern fn bool is_file_dropped() @extern("IsFileDropped");
 extern fn FilePathList load_dropped_files() @extern("LoadDroppedFiles");                  
 extern fn void unload_dropped_files(FilePathList files) @extern("UnloadDroppedFiles");         
 extern fn long get_file_mod_time(char *fileName) @extern("GetFileModTime");          
+
+extern fn char *compress_data(char *data, int dataSize, int *compDataSize) @extern("CompressData");        
+extern fn char *decompress_data(char *compData, int compDataSize, int *dataSize) @extern("DecompressData"); 
+extern fn char *encode_database_64(char *data, int dataSize, int *outputSize) @extern("EncodeDatabase64");    
+extern fn char *decode_database_64(char *data, int *outputSize) @extern("DecodeDatabase64");                 
