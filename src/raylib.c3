@@ -669,3 +669,11 @@ extern fn void set_shader_value_v(Shader shader, int locIndex, void *value, int 
 extern fn void set_shader_value_matrix(Shader shader, int locIndex, Matrix mat) @extern("SetShaderValueMatrix");
 extern fn void set_shader_value_texture(Shader shader, int locIndex, Texture2D texture) @extern("SetShaderValueTexture");
 extern fn void unload_shader(Shader shader) @extern("UnloadShader");
+
+extern fn Ray get_mouse_ray(Vector2 mousePosition, Camera camera) @extern("GetMouseRay");      
+extern fn Matrix get_camera_matrix(Camera camera) @extern("GetCameraMatrix");
+extern fn Matrix get_camera_matrix_2d(Camera2D camera) @extern("GetCameraMatrix2D");
+extern fn Vector2 get_world_to_screen(Vector3 position, Camera camera) @extern("GetWorldToScreen");
+extern fn Vector2 get_screen_to_world_2d(Vector2 position, Camera2D camera) @extern("GetScreenToWorld2D"); 
+extern fn Vector2 get_world_to_screen_ex(Vector3 position, Camera camera, int width, int height) @extern("GetWorldToScreenEx"); 
+extern fn Vector2 get_world_to_screen_2d(Vector2 position, Camera2D camera) @extern("GetWorldToScreen2D");
