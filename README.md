@@ -35,3 +35,4 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] misc functions
     - [x] util functions
     - [x] callback functions
+    - [x] file functions

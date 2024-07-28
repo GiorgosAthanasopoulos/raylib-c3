@@ -707,3 +707,11 @@ extern fn void set_load_file_data_callback(LoadFileDataCallback callback) @exter
 extern fn void set_save_file_data_callback(SaveFileDataCallback callback) @extern("SetSaveFileDataCallback");
 extern fn void set_load_file_text_callback(LoadFileTextCallback callback) @extern("SetLoadFileTextCallback");
 extern fn void set_save_file_text_callback(SaveFileTextCallback callback) @extern("SetSaveFileTextCallback");
+
+extern fn char *load_file_data(char *fileName, int *dataSize) @extern("LoadFileData");
+extern fn void unload_file_data(char *data) @extern("UnloadFileData");                   
+extern fn bool save_file_data(char *fileName, void *data, int dataSize) @extern("SaveFileData");
+extern fn bool export_data_as_code(char *data, int dataSize, char *fileName) @extern("ExportDataAsCode"); 
+extern fn char *load_file_text(char *fileName) @extern("LoadFileText");                 
+extern fn void unload_file_text(char *text) @extern("UnloadFileText");                     
+extern fn bool save_file_text(char *fileName, char *text) @extern("SaveFileText");        
