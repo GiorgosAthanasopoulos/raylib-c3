@@ -38,3 +38,4 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] file functions
     - [x] filesystem functions
     - [x] compression functions
+    - [x] automation functions

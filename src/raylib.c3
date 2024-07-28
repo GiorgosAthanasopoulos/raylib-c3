@@ -741,3 +741,12 @@ extern fn char *compress_data(char *data, int dataSize, int *compDataSize) @exte
 extern fn char *decompress_data(char *compData, int compDataSize, int *dataSize) @extern("DecompressData"); 
 extern fn char *encode_database_64(char *data, int dataSize, int *outputSize) @extern("EncodeDatabase64");    
 extern fn char *decode_database_64(char *data, int *outputSize) @extern("DecodeDatabase64");                 
+
+extern fn AutomationEventList load_automation_event_list(char *fileName) @extern("LoadAutomationEventList");             
+extern fn void unload_automation_event_list(AutomationEventList *list) @extern("UnloadAutomationEventList");                      
+extern fn bool export_automation_event_list(AutomationEventList list, char *fileName) @extern("ExportAutomationEventList");  
+extern fn void set_automation_event_list(AutomationEventList *list) @extern("SetAutomationEventList");                           
+extern fn void set_automation_event_base_frame(int frame) @extern("SetAutomationEventBaseFrame");                                   
+extern fn void start_automation_event_recording() @extern("StartAutomationEventRecording");                                       
+extern fn void stop_automation_event_recording() @extern("StopAutomationEventRecording");                                         
+extern fn void play_automation_event(AutomationEvent event) @extern("PlayAutomationEvent");                                  
