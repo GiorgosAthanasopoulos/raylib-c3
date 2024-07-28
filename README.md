@@ -23,3 +23,4 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] Enumerations (window flags, etc.)
     - [x] Macro definitions (colors, etc.)
     - [x] Structures (vectors, etc.)
+    - [x] window functions
