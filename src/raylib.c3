@@ -785,3 +785,9 @@ extern fn void set_mouse_scale(float scaleX, float scaleY) @extern("SetMouseScal
 extern fn float get_mouse_wheel_move() @extern("GetMouseWheelMove");                       
 extern fn Vector2 get_mouse_wheel_move_v() @extern("GetMouseWheelMoveV");                   
 extern fn void set_mouse_cursor(int cursor) @extern("SetMouseCursor");                   
+
+extern fn int get_touch_x() @extern("GetTouchX");                                
+extern fn int get_touch_y() @extern("GetTouchY");                                 
+extern fn Vector2 get_touch_position(int index) @extern("GetTouchPosition");                  
+extern fn int get_touch_point_id(int index) @extern("GetTouchPointId");                        
+extern fn int get_touch_point_count() @extern("GetTouchPointCount");                           
