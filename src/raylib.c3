@@ -1,5 +1,168 @@
 module raylib;
 
+struct Matrix {
+    float m0, m4, m8, m12;
+    float m1, m5, m9, m13;
+    float m2, m6, m10, m14;
+    float m3, m7, m11, m15;
+}
+
+struct Rectangle {
+    float x, y, width, height;
+}
+
+struct Image {
+    void *data;
+    int width, height, mipmaps, format;
+}
+
+struct Texture {
+    uint id;
+    int width, height, mipmaps, format;
+}
+struct RenderTexture {
+    uint id;
+    Texture texture;
+    Texture depth;
+}
+
+struct NPatchInfo {
+    Rectangle source;
+    int left, top, right, bottom, layout;
+}
+
+struct GlyphInfo {
+    int value, offsetX, offsetY, advanceX;
+    Image image;
+}
+
+struct Font {
+    int baseSize, glyphCount, glyphPadding;
+    Texture2D texture;
+    Rectangle *recs;
+    GlyphInfo *glyphs;
+}
+
+struct Camera3D {
+    Vector3 pos;
+    float fovy;
+    int projection;
+}
+struct Camera2D {
+    Vector2 offset, target;
+    float rotation, zoom;
+}
+
+struct Mesh {
+    int vertexCount, triangleCount;
+    float *vertices, texcoords, texcoords2, normals, tangents, animVertices, animNormals, boneWeights;
+    char *colors, boneIds;
+    ushort *indices;
+    uint vaoId;
+    uint *vboId;
+}
+
+struct Shader {
+    uint id;
+    int *locs;
+}
+
+struct MaterialMap {
+    Texture2D texture;
+    Color color;
+    float value;
+}
+struct Material {
+    Shader shader;
+    MaterialMap *maps;
+    float [4]params;
+}
+
+struct Transform {
+    Vector3 translation, scale;
+    Quaternion rotation;
+}
+
+struct BoneInfo {
+    char [32]name;
+    int parent;
+}
+
+struct Model {
+    Matrix transform;
+    int meshCount, materialCount, boneCount;
+    Mesh *meshes;
+    Material *materials;
+    int *meshMaterial;
+    BoneInfo *bones;
+    Transform *bindPose;
+}
+struct ModelAnimation {
+    int boneCount, frameCount;
+    BoneInfo *bones;
+    Transform **framePoses;
+    char [32]name;
+}
+
+struct Ray {
+    Vector3 position, direction;
+}
+struct RayCollision {
+    bool hit;
+    float distance;
+    Vector3 point, normal;
+} 
+struct BoundingBox {
+    Vector3 min, max;
+}
+
+struct Wave {
+    uint frameCount, sampleRate, sampleSize, channels;
+    void *data;
+}
+struct AudioStream {
+    // TODO: implement rlaudio
+    uint sampleRate, sampleSize, channels;
+
+}
+struct Sound {
+    AudioStream sound;
+    uint frameCount;
+}
+struct Music {
+    AudioStream stream;
+    uint frameCount;
+    bool looping;
+    int ctxType;
+    void *ctxData;
+}
+
+struct VrDeviceInfo {
+    int hResolution, vResolution;
+    float hScreenSize, vScreenSize, eyeToScreenDistance, lensSeparationDistance, interpupillaryDistance;
+    float [4]lensDistortionValues, chromaAbCorrection;
+}
+struct VrStereoConfig {
+    Matrix [2]projection, viewOffset;
+    float [2]leftLensCenter, rightLensCenter, leftScreenCenter, rightScreenCenter, scale, scaleIn;
+}
+
+struct FilePathList {
+    uint capacity;
+    uint count;
+    char **paths;
+}
+
+struct AutomationEvent {
+    uint frame, type;
+    int [4]params;
+}
+struct AutomationEventList {
+    uint capacity;
+    uint count;
+    AutomationEvent *events;
+}
+
 enum ConfigFlags : int(int hex) {
     FLAG_VSYNC_HINT         = 0x00000040,      
     FLAG_FULLSCREEN_MODE    = 0x00000002,
