@@ -654,3 +654,7 @@ extern fn void begin_scissor_mode(int x, int y, int width, int height) @extern("
 extern fn void end_scissor_mode() @extern("EndScissorMode");                                  
 extern fn void begin_vr_stereo_mode(VrStereoConfig config) @extern("BeginVrStereoMode");           
 extern fn void end_vr_stereo_mode() @extern("EndVrStereoMode");   
+
+extern fn VrStereoConfig load_vr_stereo_config(VrDeviceInfo device) @extern("LoadVrStereoConfig");   
+extern fn void unload_vr_stereo_config(VrStereoConfig config) @extern("UnloadVrStereoConfig");         
+
