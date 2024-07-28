@@ -995,3 +995,10 @@ extern fn Image gen_image_from_atlas(GlyphInfo *glyphs, Rectangle **glyphRecs, i
 extern fn void unload_font_data(GlyphInfo *glyphs, int glyphCount) @extern("UnloadFontData");                       
 extern fn void unload_font(Font font) @extern("UnloadFont");                                                    
 extern fn bool export_font_as_code(Font font, char *fileName) @extern("ExportFontAsCode");                               
+
+extern fn void draw_fps(int posX, int posY) @extern("DrawFPS");                                                     
+extern fn void draw_text(char *text, int posX, int posY, int fontSize, Color color) @extern("DrawText");       
+extern fn void draw_text_ex(Font font, char *text, Vector2 position, float fontSize, float spacing, Color tint) @extern("DrawTextEx"); 
+extern fn void draw_text_pro(Font font, char *text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color tint) @extern("DrawTextPro"); 
+extern fn void draw_text_codepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint) @extern("DrawTextCodepoint"); 
+extern fn void draw_text_codepoints(Font font, int *codepoints, int codepointCount, Vector2 position, float fontSize, float spacing, Color tint) @extern("DrawTextCodepoints"); 
