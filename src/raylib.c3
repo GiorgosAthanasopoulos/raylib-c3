@@ -791,3 +791,12 @@ extern fn int get_touch_y() @extern("GetTouchY");
 extern fn Vector2 get_touch_position(int index) @extern("GetTouchPosition");                  
 extern fn int get_touch_point_id(int index) @extern("GetTouchPointId");                        
 extern fn int get_touch_point_count() @extern("GetTouchPointCount");                           
+
+extern fn void set_gestures_enabled(uint flags) @extern("SetGesturesEnabled");  
+extern fn bool is_gesture_detected(uint gesture) @extern("IsGestureDetected"); 
+extern fn int get_gesture_detected() @extern("GetGestureDetected");
+extern fn float get_gesture_hold_duration() @extern("GetGestureHoldDuration");           
+extern fn Vector2 get_gesture_drag_vector() @extern("GetGestureDragVector");            
+extern fn float get_gesture_drag_angle() @extern("GetGestureDragAngle");                
+extern fn Vector2 get_gesture_pinch_vector() @extern("GetGesturePinchVector");             
+extern fn float get_gesture_pinch_angle() @extern("GetGesturePinchAngle");                 

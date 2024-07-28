@@ -43,7 +43,7 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] gamepads functions
     - [x] mouse functions
     - [x] touch functions
-    - [ ] gestures
+    - [x] gestures
     - [ ] camera
 - [ ] rshapes
     - [ ] basic shape functions
