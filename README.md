@@ -41,3 +41,40 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] automation functions
     - [x] keyboard functions
     - [x] gamepads functions
+    - [ ] mouse functions
+    - [ ] touch functions
+    - [ ] gestures
+    - [ ] camera
+- [ ] rshapes
+    - [ ] basic shape functions
+    - [ ] spline functions
+    - [ ] basic collision functions
+- [ ] rtextures
+    - [ ] image loading functions
+    - [ ] image generation functions
+    - [ ] image manipulation functions
+    - [ ] image drawing functions
+    - [ ] texture loading functions
+    - [ ] texture configuration functions
+    - [ ] color/pixel related functions
+- [ ] rtext
+    - [ ] font loading/unloading functions
+    - [ ] text drawing functions
+    - [ ] font info functions
+    - [ ] text codepoint management functions
+    - [ ] text strings management functions
+- [ ] rmodels
+    - [ ] basic 3d shape functions
+    - [ ] model management functions
+    - [ ] model drawing functions 
+    - [ ] mesh management functions
+    - [ ] mesh generation functions
+    - [ ] material loading/unloading functions 
+    - [ ] model animations loading/unloading functions
+    - [ ] collision detection functions
+- [ ] raudio
+    - [ ] audio device management functions
+    - [ ] wave/sound loading/unloading functions
+    - [ ] wave/sound management functions
+    - [ ] music management functions
+    - [ ] audiostream management functions
