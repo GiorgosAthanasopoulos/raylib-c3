@@ -27,3 +27,4 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] cursor functions
     - [x] drawing functions
     - [x] vr functions 
+    - [x] shader functions 

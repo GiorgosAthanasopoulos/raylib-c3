@@ -658,3 +658,14 @@ extern fn void end_vr_stereo_mode() @extern("EndVrStereoMode");
 extern fn VrStereoConfig load_vr_stereo_config(VrDeviceInfo device) @extern("LoadVrStereoConfig");   
 extern fn void unload_vr_stereo_config(VrStereoConfig config) @extern("UnloadVrStereoConfig");         
 
+
+extern fn Shader load_shader(char *vsFileName, char *fsFileName) @extern("LoadShader");
+extern fn Shader load_shader_from_meomry(char *vsCode, char *fsCode) @extern("LoadShaderFromMemory");
+extern fn bool is_shader_ready(Shader shader) @extern("IsShaderReady");
+extern fn int get_shader_location(Shader shaderconst char *uniformName) @extern("GetShaderLocation");      
+extern fn int get_shader_location_attrib(Shader shader, char *attribName) @extern("GetShaderLocationAttrib");
+extern fn void set_shader_value(Shader shader, int locIndex, void *value, int uniformType) @extern("SetShaderValue");               
+extern fn void set_shader_value_v(Shader shader, int locIndex, void *value, int uniformType, int count) @extern("SetShaderValueV");  
+extern fn void set_shader_value_matrix(Shader shader, int locIndex, Matrix mat) @extern("SetShaderValueMatrix");
+extern fn void set_shader_value_texture(Shader shader, int locIndex, Texture2D texture) @extern("SetShaderValueTexture");
+extern fn void unload_shader(Shader shader) @extern("UnloadShader");
