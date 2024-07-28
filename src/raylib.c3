@@ -967,3 +967,19 @@ extern fn void draw_texture_ex(Texture2D texture, Vector2 position, float rotati
 extern fn void draw_texture_rec(Texture2D texture, Rectangle source, Vector2 position, Color tint) @extern("DrawTextureRec");            
 extern fn void draw_texture_pro(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, Color tint) @extern("DrawTexturePro"); 
 extern fn void draw_texture_n_patch(Texture2D texture, NPatchInfo nPatchInfo, Rectangle dest, Vector2 origin, float rotation, Color tint) @extern("DrawTextureNPatch");
+
+extern fn Color fade(Color color, float alpha) @extern("Fade");                   
+extern fn int color_to_int(Color color) @extern("ColorToInt");                             
+extern fn Vector4 color_normalize(Color color) @extern("ColorToNormalize");                      
+extern fn Color color_from_normalized(Vector4 normalized) @extern("ColorFromNormalized");             
+extern fn Vector3 color_to_hsv(Color color) @extern("ColorToHSV");                            
+extern fn Color color_from_hsv(float hue, float saturation, float value) @extern("ColorFromHSV");
+extern fn Color color_tint(Color color, Color tint) @extern("ColorTint");                     
+extern fn Color color_brightness(Color color, float factor) @extern("ColorBrightness");              
+extern fn Color color_contrast(Color color, float contrast) @extern("ColorContrast");               
+extern fn Color color_alpha(Color color, float alpha) @extern("ColorAlpha");                      
+extern fn Color color_alpha_blend(Color dst, Color src, Color tint) @extern("ColorAlphaBlend");          
+extern fn Color get_color(uint hexValue) @extern("GetColor");                             
+extern fn Color get_pixel_color(void *srcPtr, int format) @extern("GetPixelColor");                      
+extern fn void set_pixel_color(void *dstPtr, Color color, int format) @extern("SetPixelColor");           
+extern fn int get_pixel_data_size(int width, int height, int format) @extern("GetPixelDataSize");              
