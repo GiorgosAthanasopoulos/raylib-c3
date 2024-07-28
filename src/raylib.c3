@@ -800,3 +800,6 @@ extern fn Vector2 get_gesture_drag_vector() @extern("GetGestureDragVector");
 extern fn float get_gesture_drag_angle() @extern("GetGestureDragAngle");                
 extern fn Vector2 get_gesture_pinch_vector() @extern("GetGesturePinchVector");             
 extern fn float get_gesture_pinch_angle() @extern("GetGesturePinchAngle");                 
+
+extern fn void update_camera(Camera *camera, int mode) @extern("UpdateCamera");      
+extern fn void update_camera_pro(Camera *camera, Vector3 movement, Vector3 rotation, float zoom) @extern("UpdateCameraPro"); 
