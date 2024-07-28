@@ -695,3 +695,9 @@ extern fn void unload_random_sequence(int *sequence) @extern("UnloadRandomSequen
 extern fn void take_screenshot(char *fileName) @extern("TakeScreenshot");                
 extern fn void set_config_flags(uint flags) @extern("SetConfigFlags");                   
 extern fn void open_url(char *url) @extern("OpenURL");                              
+
+extern fn void trace_log(int logLevel, char *text, ...) @extern("TraceLog");         
+extern fn void set_trace_log_level(int logLevel) @extern("SetTraceLogLevel");               
+extern fn void *mem_alloc(uint size) @extern("MemAlloc");                          
+extern fn void *mem_realloc(void *ptr, uint size) @extern("MemRealloc");            
+extern fn void mem_free(void *ptr) @extern("MemFree");                          

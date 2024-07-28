@@ -33,3 +33,4 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] frame control functions
     - [x] random functions  
     - [x] misc functions
+    - [x] util functions
