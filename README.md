@@ -16,3 +16,8 @@ Raylib bindings for the C3 programming language. (WIP)
 # Example
 
 - See `src/main.c3` and `makefile` (for building) for an example on how to use the library.
+
+# Progress
+
+- [ ] rcore
+    - [x] Enumerations (window flags, etc.)
