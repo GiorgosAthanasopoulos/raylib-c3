@@ -163,7 +163,7 @@ struct AutomationEventList {
     AutomationEvent *events;
 }
 
-enum ConfigFlags : int(int hex) {
+enum ConfigFlags : int(int num) {
     FLAG_VSYNC_HINT         = 0x00000040,      
     FLAG_FULLSCREEN_MODE    = 0x00000002,
     FLAG_WINDOW_RESIZABLE   = 0x00000004,
@@ -822,9 +822,9 @@ extern fn void draw_circle_lines(int centerX, int centerY, float radius, Color c
 extern fn void draw_circle_lines_v(Vector2 center, float radius, Color color) @extern("DrawCirclesLinesV");                              
 extern fn void draw_ellipse(int centerX, int centerY, float radiusH, float radiusV, Color color) @extern("DrawEllipse");          
 extern fn void draw_ellipse_lines(int centerX, int centerY, float radiusH, float radiusV, Color color) @extern("DrawEllipseLines");      
-extern fn void draw_ring(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color); 
-extern fn void draw_ring_lines(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color);    
-extern fn void draw_rectangle(int posX, int posY, int width, int height, Color color) @extern("DrawRing");                     
+extern fn void draw_ring(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color) @extern("DrawRing"); 
+extern fn void draw_ring_lines(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color) @extern("DrawRingLines");    
+extern fn void draw_rectangle(int posX, int posY, int width, int height, Color color) @extern("DrawRectangle");                     
 extern fn void draw_rectangle_v(Vector2 position, Vector2 size, Color color) @extern("DrawRectangleV");                               
 extern fn void draw_rectangle_rec(Rectangle rec, Color color) @extern("DrawRectangleRec");                                               
 extern fn void draw_rectangle_pro(Rectangle rec, Vector2 origin, float rotation, Color color) @extern("DrawRectanglePro");                
