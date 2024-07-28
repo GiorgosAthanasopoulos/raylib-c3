@@ -770,3 +770,18 @@ extern fn int get_gamepad_button_pressed() @extern("GetGamepadButtonPressed");
 extern fn int get_gamepad_axis_count(int gamepad) @extern("GetGamepadAxisCount");                   
 extern fn float get_gamepad_axis_movement(int gamepad, int axis) @extern("GetGamepadAxisMovement");    
 extern fn int set_gamepad_mappings(char *mappings) @extern("SetGamepadMappings");           
+
+extern fn bool is_mouse_button_pressed(int button) @extern("IsMouseButtonPressed");                  
+extern fn bool is_mouse_button_down(int button) @extern("IsMouseButtonDown");                    
+extern fn bool is_mouse_button_released(int button) @extern("IsMouseButtonReleased");               
+extern fn bool is_mouse_button_up(int button) @extern("IsMouseButtonUp");                    
+extern fn int get_mouse_x() @extern("GetMouseX");                                
+extern fn int get_mouse_y() @extern("GetMouseY");                               
+extern fn Vector2 get_mouse_position() @extern("GetMousePosition");                   
+extern fn Vector2 get_mouse_delta() @extern("GetMouseDelta");                     
+extern fn void set_mouse_position(int x, int y) @extern("SetMousePosition");                    
+extern fn void set_mouse_offset(int offsetX, int offsetY) @extern("SetMouseOffset");         
+extern fn void set_mouse_scale(float scaleX, float scaleY) @extern("SetMouseScale");       
+extern fn float get_mouse_wheel_move() @extern("GetMouseWheelMove");                       
+extern fn Vector2 get_mouse_wheel_move_v() @extern("GetMouseWheelMoveV");                   
+extern fn void set_mouse_cursor(int cursor) @extern("SetMouseCursor");                   

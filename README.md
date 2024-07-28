@@ -41,7 +41,7 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] automation functions
     - [x] keyboard functions
     - [x] gamepads functions
-    - [ ] mouse functions
+    - [x] mouse functions
     - [ ] touch functions
     - [ ] gestures
     - [ ] camera
