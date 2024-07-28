@@ -629,3 +629,10 @@ extern fn void set_clipboard_text(char *text) @extern("SetClipboardText");
 extern fn char *get_clipboard_text() @extern("GetClipboardText");                    
 extern fn void enable_event_waiting() @extern("EnableEventWaiting");                        
 extern fn void disable_event_waiting() @extern("DisableEventWaiting");
+
+extern fn void show_cursor() @extern("ShowCursor");                                      
+extern fn void hide_cursor() @extern("HideCursor");                                     
+extern fn bool is_cursor_hidden() @extern("IsCursorHidden");                                
+extern fn void enable_cursor() @extern("EnableCursor");                                 
+extern fn void disable_cursor() @extern("DisableCursor");                               
+extern fn bool is_cursor_on_screen() @extern("IsCursorOnSreen");
