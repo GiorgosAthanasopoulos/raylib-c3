@@ -750,3 +750,12 @@ extern fn void set_automation_event_base_frame(int frame) @extern("SetAutomation
 extern fn void start_automation_event_recording() @extern("StartAutomationEventRecording");                                       
 extern fn void stop_automation_event_recording() @extern("StopAutomationEventRecording");                                         
 extern fn void play_automation_event(AutomationEvent event) @extern("PlayAutomationEvent");                                  
+
+extern fn bool is_key_pressed(int key) @extern("IsKeyPressed");                      
+extern fn bool is_key_pressed_repeat(int key) @extern("IsKeyPressedRepeat");                 
+extern fn bool is_key_down(int key) @extern("IsKeyDown");                           
+extern fn bool is_key_released(int key) @extern("IsKeyReleased");                        
+extern fn bool is_key_up(int key) @extern("IsKeyUp");                               
+extern fn int get_key_pressed() @extern("GetKeyPressed");                              
+extern fn int get_char_pressed() @extern("GetCharPressed");                              
+extern fn void set_exit_key(int key) @extern("SetExitKey");                               
