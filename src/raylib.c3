@@ -842,3 +842,14 @@ extern fn void draw_triangle_strip(Vector2 *points, int pointCount, Color color)
 extern fn void draw_poly(Vector2 center, int sides, float radius, float rotation, Color color) @extern("DrawPoly");              
 extern fn void draw_poly_lines(Vector2 center, int sides, float radius, float rotation, Color color) @extern("DrawPolyLines");          
 extern fn void draw_poly_lines_ex(Vector2 center, int sides, float radius, float rotation, float lineThick, Color color) @extern("DrawPolyLinesEx"); 
+
+extern fn void draw_spline_linear(Vector2 *points, int pointCount, float thick, Color color) @extern("DrawSplineLinear");              
+extern fn void draw_spline_basis(Vector2 *points, int pointCount, float thick, Color color) @extern("DrawSplineBasis");                
+extern fn void draw_spline_catmull_rom(Vector2 *points, int pointCount, float thick, Color color) @extern("DrawSplineCatmullRom");           
+extern fn void draw_spline_bezier_quadratic(Vector2 *points, int pointCount, float thick, Color color) @extern("DrawSplineBezierQuadratic");       
+extern fn void draw_spline_bezier_cubic(Vector2 *points, int pointCount, float thick, Color color) @extern("DrawSplineBezierCubic");            
+extern fn void draw_spline_segment_linear(Vector2 p1, Vector2 p2, float thick, Color color) @extern("DrawSplineSegmentLinear");                    
+extern fn void draw_spline_segment_basis(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float thick, Color color) @extern("DrawSplineSegmentBasis"); 
+extern fn void draw_spline_segment_catmull_rom(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, float thick, Color color) @extern("DrawSplineSegmentCatmullRom"); 
+extern fn void draw_spline_segment_bezier_quadratic(Vector2 p1, Vector2 c2, Vector2 p3, float thick, Color color) @extern("DrawSplineSegmentBezierQuadratic"); 
+extern fn void draw_spline_segment_bezier_cubic(Vector2 p1, Vector2 c2, Vector2 c3, Vector2 p4, float thick, Color color) @extern("DrawSplineSegmentBezierCubic"); 

@@ -47,7 +47,7 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] camera
 - [ ] rshapes
     - [x] basic shape functions
-    - [ ] spline functions
+    - [x] spline functions
     - [ ] spline segment functions
     - [ ] basic collision functions
 - [ ] rtextures
