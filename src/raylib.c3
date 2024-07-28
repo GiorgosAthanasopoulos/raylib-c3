@@ -715,3 +715,24 @@ extern fn bool export_data_as_code(char *data, int dataSize, char *fileName) @ex
 extern fn char *load_file_text(char *fileName) @extern("LoadFileText");                 
 extern fn void unload_file_text(char *text) @extern("UnloadFileText");                     
 extern fn bool save_file_text(char *fileName, char *text) @extern("SaveFileText");        
+
+extern fn bool file_exists(char *fileName) @extern("FileExists");
+extern fn bool directory_exists(char *dirPath) @extern("DirectoryExists");
+extern fn bool is_file_extension(char *fileName, char *ext) @extern("IsFileExtension");
+extern fn int get_file_length(char *fileName) @extern("GetFileLength");
+extern fn char *get_file_extension(char *fileName) @extern("GetFileExtension");       
+extern fn char *get_file_name(char *filePath) @extern("GetFileName");           
+extern fn char *get_filename_without_ext(char *filePath) @extern("GetFilenameWithoutExt");
+extern fn char *get_directory_path(char *filePath) @extern("GetDirectoryPath");
+extern fn char *get_prev_directory_path(char *dirPath) @extern("GetPrevDirectoryPath");  
+extern fn char *get_working_directory() @extern("GetWorkingDirectory");                 
+extern fn char *get_application_directory() @extern("GetApplicationDirectory");            
+extern fn bool change_directory(char *dir) @extern("ChangeDirectory");               
+extern fn bool is_path_file(char *path) @extern("IsPathFile");
+extern fn FilePathList load_directory_files(char *dirPath) @extern("LoadDirectoryFiles");
+extern fn FilePathList load_directory_files_ex(char *basePath, char *filter, bool scanSubdirs) @extern("LoadDirectoryFilesEx");
+extern fn void unload_directory_files(FilePathList files) @extern("UnloadDirectoryFiles");          
+extern fn bool is_file_dropped() @extern("IsFileDropped");                              
+extern fn FilePathList load_dropped_files() @extern("LoadDroppedFiles");                  
+extern fn void unload_dropped_files(FilePathList files) @extern("UnloadDroppedFiles");         
+extern fn long get_file_mod_time(char *fileName) @extern("GetFileModTime");          
