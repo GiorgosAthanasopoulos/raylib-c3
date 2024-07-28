@@ -945,3 +945,14 @@ extern fn void image_draw_rectangle_lines(Image *dst, Rectangle rec, int thick, 
 extern fn void image_draw(Image *dst, Image src, Rectangle srcRec, Rectangle dstRec, Color tint) @extern("ImageDraw");      
 extern fn void image_draw_text(Image *dst, char *text, int posX, int posY, int fontSize, Color color) @extern("ImageDrawText");   
 extern fn void image_draw_text_ex(Image *dst, Font font, char *text, Vector2 position, float fontSize, float spacing, Color tint) @extern("ImageDrawTextEx"); 
+
+extern fn Texture2D load_texture(char *fileName) @extern("LoadTexture");                                                       
+extern fn Texture2D load_texture_from_image(Image image) @extern("LoadTextureFromImage");                                                 
+extern fn TextureCubemap load_texture_cubemap(Image image, int layout) @extern("LoadTextureCubemap");                                 
+extern fn RenderTexture2D load_render_texture(int width, int height) @extern("LoadRenderTexture");                                  
+extern fn bool is_texture_ready(Texture2D texture) @extern("IsTextureReady");                                                   
+extern fn void unload_texture(Texture2D texture) @extern("UnloadTexture");                                                   
+extern fn bool is_render_texture_ready(RenderTexture2D target) @extern("IsRenderTextureReady");                                      
+extern fn void unload_render_texture(RenderTexture2D target) @extern("UploadRenderTexture");                                      
+extern fn void update_texture(Texture2D texture, void *pixels) @extern("UpdateTexture");                                  
+extern fn void update_texture_rec(Texture2D texture, Rectangle rec, void *pixels) @extern("UpdateTextureRec");              
