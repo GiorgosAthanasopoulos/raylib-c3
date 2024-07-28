@@ -870,3 +870,16 @@ extern fn bool check_collision_point_poly(Vector2 point, Vector2 *points, int po
 extern fn bool check_collision_lines(Vector2 startPos1, Vector2 endPos1, Vector2 startPos2, Vector2 endPos2, Vector2 *collisionPoint) @extern("CheckCollisionLines"); 
 extern fn bool check_collision_point_line(Vector2 point, Vector2 p1, Vector2 p2, int threshold) @extern("CheckCollisionPointLine");               
 extern fn Rectangle get_collision_rec(Rectangle rec1, Rectangle rec2) @extern("GetCollisionRec");                                         
+
+extern fn Image load_image(char *fileName) @extern("LoadImage");                                                             
+extern fn Image load_image_raw(char *fileName, int width, int height, int format, int headerSize) @extern("LoadImageRaw");      
+extern fn Image load_image_svg(char *fileNameOrString, int width, int height) @extern("LoadImageSvg");                         
+extern fn Image load_image_anim(char *fileName, int *frames) @extern("LoadImageAnim");                                         
+extern fn Image load_image_from_memory(char *fileType, char *fileData, int dataSize) @extern("LoadImageFromMemory");      
+extern fn Image load_image_from_texture(Texture2D texture) @extern("LoadImageFromTexture");                                                     
+extern fn Image load_image_from_screen() @extern("LoadImageFromScreen");                                                                   
+extern fn bool is_image_ready(Image image) @extern("IsImageReady");                                                               
+extern fn void unload_image(Image image) @extern("UnloadImage");                                                               
+extern fn bool export_image(Image image, char *fileName) @extern("ExportImage");                                              
+extern fn char *export_image_to_memory(Image image, char *fileType, int *fileSize) @extern("ExportImageToMemory");            
+extern fn bool export_image_as_code(Image image, char *fileName) @extern("ExportImageAsCode");                                      
