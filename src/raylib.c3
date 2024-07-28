@@ -682,3 +682,7 @@ extern fn void set_target_fps(int fps) @extern("SetTargetFPS");
 extern fn float get_frame_time() @extern("GetFrameTime");                                 
 extern fn double get_time() @extern("GetTime");
 extern fn int get_fps() @extern("GetFPS");
+
+extern fn void swap_screen_buffer() @extern("SwapScreenBuffer");                              
+extern fn void poll_input_events() @extern("PollInputEvents");                                
+extern fn void wait_time(double seconds) @extern("WaitTime");                              
