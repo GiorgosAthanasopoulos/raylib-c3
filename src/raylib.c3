@@ -883,3 +883,13 @@ extern fn void unload_image(Image image) @extern("UnloadImage");
 extern fn bool export_image(Image image, char *fileName) @extern("ExportImage");                                              
 extern fn char *export_image_to_memory(Image image, char *fileType, int *fileSize) @extern("ExportImageToMemory");            
 extern fn bool export_image_as_code(Image image, char *fileName) @extern("ExportImageAsCode");                                      
+
+extern fn Image gen_image_color(int width, int height, Color color) @extern("GenImageColor");                                       
+extern fn Image gen_image_gradient_linear(int width, int height, int direction, Color start, Color end) @extern("GenImageGradientLinear");    
+extern fn Image gen_image_gradient_radial(int width, int height, float density, Color inner, Color outer) @extern("GenImageGradientRadial");   
+extern fn Image gen_image_gradient_square(int width, int height, float density, Color inner, Color outer) @extern("GenImageGradientSquare");    
+extern fn Image gen_image_checked(int width, int height, int checksX, int checksY, Color col1, Color col2) @extern("GenImageChecked");    
+extern fn Image gen_image_white_noise(int width, int height, float factor) @extern("GenImageWhiteNoise");                               
+extern fn Image gen_image_perlin_noise(int width, int height, int offsetX, int offsetY, float scale) @extern("GenImagePerlinNoise");    
+extern fn Image gen_image_cellular(int width, int height, int tileSize) @extern("GenImageCellular");                                
+extern fn Image gen_image_text(int width, int height, char *text) @extern("GenImageText");                                     
