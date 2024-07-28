@@ -677,3 +677,8 @@ extern fn Vector2 get_world_to_screen(Vector3 position, Camera camera) @extern("
 extern fn Vector2 get_screen_to_world_2d(Vector2 position, Camera2D camera) @extern("GetScreenToWorld2D"); 
 extern fn Vector2 get_world_to_screen_ex(Vector3 position, Camera camera, int width, int height) @extern("GetWorldToScreenEx"); 
 extern fn Vector2 get_world_to_screen_2d(Vector2 position, Camera2D camera) @extern("GetWorldToScreen2D");
+
+extern fn void set_target_fps(int fps) @extern("SetTargetFPS");                                
+extern fn float get_frame_time() @extern("GetFrameTime");                                 
+extern fn double get_time() @extern("GetTime");
+extern fn int get_fps() @extern("GetFPS");
