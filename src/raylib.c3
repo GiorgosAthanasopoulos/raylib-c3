@@ -354,3 +354,22 @@ enum NPathLayout: int(int num) {
     NPATCH_THREE_PATCH_VERTICAL = 1,
     NPATCH_THREE_PATCH_HORIZONTAL = 2,
 }
+
+def Vector2 = float[<2>];
+def Vector3 = float[<3>];
+def Vector4 = float[<4>];
+def Quaternion = Vector4;
+
+def Color = char[<4>];
+
+def Texture2D = Texture;
+def TextureCubemap = Texture;
+def RenderTexture2D = RenderTexture;
+
+def Camera = Camera3D;
+
+// TODO: TraceLogCallback // va_list?
+def LoadFileDataCallback = fn char*(char *filename, int *dataSize);
+def SaveFileDataCallback = fn bool(char *filename, void *data, int dataSize);
+def LoadFileTextCallback = fn char*(char *fileName);            
+def SaveFileTextCallback = fn bool(char *filename, char *text);

@@ -21,3 +21,4 @@ Raylib bindings for the C3 programming language. (WIP)
 
 - [ ] rcore
     - [x] Enumerations (window flags, etc.)
+    - [x] Macro definitions (colors, etc.)
