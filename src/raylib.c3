@@ -960,3 +960,10 @@ extern fn void update_texture_rec(Texture2D texture, Rectangle rec, void *pixels
 extern fn void gen_texture_mipmaps(Texture2D *texture) @extern("GenTextureMipmaps");                                                        
 extern fn void set_texture_filter(Texture2D texture, int filter) @extern("SetTextureFilter");                                             
 extern fn void set_texture_wrap(Texture2D texture, int wrap) @extern("SetTextureWrap");                                                
+
+extern fn void draw_texture(Texture2D texture, int posX, int posY, Color tint) @extern("DrawTexture");                             
+extern fn void draw_texture_v(Texture2D texture, Vector2 position, Color tint) @extern("DrawTextureV");                              
+extern fn void draw_texture_ex(Texture2D texture, Vector2 position, float rotation, float scale, Color tint) @extern("DrawTextureEx"); 
+extern fn void draw_texture_rec(Texture2D texture, Rectangle source, Vector2 position, Color tint) @extern("DrawTextureRec");            
+extern fn void draw_texture_pro(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, Color tint) @extern("DrawTexturePro"); 
+extern fn void draw_texture_n_patch(Texture2D texture, NPatchInfo nPatchInfo, Rectangle dest, Vector2 origin, float rotation, Color tint) @extern("DrawTextureNPatch");
