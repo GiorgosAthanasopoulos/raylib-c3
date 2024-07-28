@@ -691,3 +691,7 @@ extern fn void set_random_seed(uint seed) @extern("SetRandomSeed");
 extern fn int get_random_value(int min, int max) @extern("GetRandomValue");                  
 extern fn int *load_random_sequence(uint count, int min, int max) @extern("LoadRandomSequence");
 extern fn void unload_random_sequence(int *sequence) @extern("UnloadRandomSequence");
+
+extern fn void take_screenshot(char *fileName) @extern("TakeScreenshot");                
+extern fn void set_config_flags(uint flags) @extern("SetConfigFlags");                   
+extern fn void open_url(char *url) @extern("OpenURL");                              
