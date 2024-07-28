@@ -686,3 +686,8 @@ extern fn int get_fps() @extern("GetFPS");
 extern fn void swap_screen_buffer() @extern("SwapScreenBuffer");                              
 extern fn void poll_input_events() @extern("PollInputEvents");                                
 extern fn void wait_time(double seconds) @extern("WaitTime");                              
+
+extern fn void set_random_seed(uint seed) @extern("SetRandomSeed");                     
+extern fn int get_random_value(int min, int max) @extern("GetRandomValue");                  
+extern fn int *load_random_sequence(uint count, int min, int max) @extern("LoadRandomSequence");
+extern fn void unload_random_sequence(int *sequence) @extern("UnloadRandomSequence");
