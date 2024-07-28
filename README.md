@@ -12,3 +12,7 @@ Raylib bindings for the C3 programming language. (WIP)
     }```
 - Link with raylib lib: ```c3c compile -l /usr/lib/libraylib.so my_file.c3 raylib.c3```
 - Profit!
+
+# Example
+
+- See `src/main.c3` and `makefile` (for building) for an example on how to use the library.
