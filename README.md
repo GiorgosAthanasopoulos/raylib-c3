@@ -40,3 +40,4 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] compression functions
     - [x] automation functions
     - [x] keyboard functions
+    - [x] gamepads functions

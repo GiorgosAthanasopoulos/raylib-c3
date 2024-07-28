@@ -759,3 +759,14 @@ extern fn bool is_key_up(int key) @extern("IsKeyUp");
 extern fn int get_key_pressed() @extern("GetKeyPressed");                              
 extern fn int get_char_pressed() @extern("GetCharPressed");                              
 extern fn void set_exit_key(int key) @extern("SetExitKey");                               
+
+extern fn bool is_gamepad_available(int gamepad) @extern("IsGamepadAvailable");               
+extern fn char *get_gamepad_name(int gamepad) @extern("GetGamepadName");             
+extern fn bool is_gamepad_button_pressed(int gamepad, int button) @extern("IsGamepadButtonPressed");   
+extern fn bool is_gamepad_button_down(int gamepad, int button) @extern("IsGamepadButtonDown");      
+extern fn bool is_gamepad_button_released(int gamepad, int button) @extern("IsGamepadButtonReleased");  
+extern fn bool is_gamepad_button_up(int gamepad, int button) @extern("IsGamepadButtonUp");        
+extern fn int get_gamepad_button_pressed() @extern("GetGamepadButtonPressed");                    
+extern fn int get_gamepad_axis_count(int gamepad) @extern("GetGamepadAxisCount");                   
+extern fn float get_gamepad_axis_movement(int gamepad, int axis) @extern("GetGamepadAxisMovement");    
+extern fn int set_gamepad_mappings(char *mappings) @extern("SetGamepadMappings");           
