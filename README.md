@@ -19,7 +19,7 @@ Raylib bindings for the C3 programming language. (WIP)
 
 # Progress
 
-- [ ] rcore
+- [x] rcore
     - [x] Enumerations (window flags, etc.)
     - [x] Macro definitions (colors, etc.)
     - [x] Structures (vectors, etc.)
@@ -48,6 +48,7 @@ Raylib bindings for the C3 programming language. (WIP)
 - [ ] rshapes
     - [ ] basic shape functions
     - [ ] spline functions
+    - [ ] spline segment functions
     - [ ] basic collision functions
 - [ ] rtextures
     - [ ] image loading functions
