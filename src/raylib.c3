@@ -537,6 +537,16 @@ def SaveFileDataCallback = fn bool(char *filename, void *data, int dataSize);
 def LoadFileTextCallback = fn char*(char *fileName);            
 def SaveFileTextCallback = fn bool(char *filename, char *text);
 
+const MouseButton MOUSE_LEFT_BUTTON = MOUSE_BUTTON_LEFT;
+const MouseButton MOUSE_RIGHT_BUTTON = MOUSE_BUTTON_RIGHT;
+const MouseButton MOUSE_MIDDLE_BUTTON = MOUSE_BUTTON_MIDDLE;
+
+const MaterialMapIndex MATERIAL_MAP_DIFFUSE = MATERIAL_MAP_ALBEDO;
+const MaterialMapIndex MATERIAL_MAP_SPECULAR = MATERIAL_MAP_METALNESS;
+
+const ShaderLocationIndex SHADER_LOC_MAP_DIFFUSE = SHADER_LOC_MAP_ALBEDO;
+const ShaderLocationIndex SHADER_LOC_MAP_SPECULAR = SHADER_LOC_MAP_METALNESS;
+
 extern fn void init_window(int width, int height, char *title) @extern("InitWindow");
 extern fn void close_window() @extern("CloseWindow");
 extern fn bool window_should_close() @extern("WindowShouldClose");
