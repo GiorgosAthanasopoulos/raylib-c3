@@ -1002,3 +1002,10 @@ extern fn void draw_text_ex(Font font, char *text, Vector2 position, float fontS
 extern fn void draw_text_pro(Font font, char *text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color tint) @extern("DrawTextPro"); 
 extern fn void draw_text_codepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint) @extern("DrawTextCodepoint"); 
 extern fn void draw_text_codepoints(Font font, int *codepoints, int codepointCount, Vector2 position, float fontSize, float spacing, Color tint) @extern("DrawTextCodepoints"); 
+
+extern fn void set_text_line_spacing(int spacing) @extern("SetTextLineSpacing");                                                 
+extern fn int measure_text(char *text, int fontSize) @extern("MeasureText");                                      
+extern fn Vector2 measure_text_ex(Font font, char *text, float fontSize, float spacing) @extern("MeasureTextEx");   
+extern fn int get_glyph_index(Font font, int codepoint) @extern("GetGlyphIndex");                                  
+extern fn Rectangle get_glyph_atlas_rec(Font font, int codepoint) @extern("GetGlyphAtlasRec");                        
+extern fn GlyphInfo get_glyph_info(Font font, int codepoint) @extern("GetGlyphInfo");                           
