@@ -983,3 +983,15 @@ extern fn Color get_color(uint hexValue) @extern("GetColor");
 extern fn Color get_pixel_color(void *srcPtr, int format) @extern("GetPixelColor");                      
 extern fn void set_pixel_color(void *dstPtr, Color color, int format) @extern("SetPixelColor");           
 extern fn int get_pixel_data_size(int width, int height, int format) @extern("GetPixelDataSize");              
+
+extern fn Font get_font_default() @extern("GetFontDefault");                                                         
+extern fn Font load_font(char *fileName) @extern("LoadFont");                                                  
+extern fn Font load_font_ex(char *fileName, int fontSize, int *codepoints, int codepointCount) @extern("LoadFontEx"); 
+extern fn Font load_font_from_image(Image image, Color key, int firstChar) @extern("LoadFontFromImage");                       
+extern fn Font load_font_from_memory(char *fileType, char *fileData, int dataSize, int fontSize, int *codepoints, int codepointCount) @extern("LoadFontFromMemory"); 
+extern fn bool is_font_ready(Font font) @extern("IsFontReady");                                                          
+extern fn GlyphInfo *load_font_data(char *fileData, int dataSize, int fontSize, int *codepoints, int codepointCount, int type) @extern("LoadFontData"); 
+extern fn Image gen_image_from_atlas(GlyphInfo *glyphs, Rectangle **glyphRecs, int glyphCount, int fontSize, int padding, int packMethod) @extern("GenImageFromAtlas"); 
+extern fn void unload_font_data(GlyphInfo *glyphs, int glyphCount) @extern("UnloadFontData");                       
+extern fn void unload_font(Font font) @extern("UnloadFont");                                                    
+extern fn bool export_font_as_code(Font font, char *fileName) @extern("ExportFontAsCode");                               
