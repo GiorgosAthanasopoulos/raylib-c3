@@ -56,7 +56,7 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] image manipulation functions
     - [x] image drawing functions
     - [x] texture loading functions
-    - [ ] texture configuration functions
+    - [x] texture configuration functions
     - [ ] color/pixel related functions
 - [ ] rtext
     - [ ] font loading/unloading functions

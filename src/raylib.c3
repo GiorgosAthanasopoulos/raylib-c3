@@ -956,3 +956,7 @@ extern fn bool is_render_texture_ready(RenderTexture2D target) @extern("IsRender
 extern fn void unload_render_texture(RenderTexture2D target) @extern("UploadRenderTexture");                                      
 extern fn void update_texture(Texture2D texture, void *pixels) @extern("UpdateTexture");                                  
 extern fn void update_texture_rec(Texture2D texture, Rectangle rec, void *pixels) @extern("UpdateTextureRec");              
+
+extern fn void gen_texture_mipmaps(Texture2D *texture) @extern("GenTextureMipmaps");                                                        
+extern fn void set_texture_filter(Texture2D texture, int filter) @extern("SetTextureFilter");                                             
+extern fn void set_texture_wrap(Texture2D texture, int wrap) @extern("SetTextureWrap");                                                
