@@ -1057,3 +1057,9 @@ extern fn void draw_capsule_wires(Vector3 startPos, Vector3 endPos, float radius
 extern fn void draw_plane(Vector3 centerPos, Vector2 size, Color color) @extern("DrawPlane");                                      
 extern fn void draw_ray(Ray ray, Color color) @extern("DrawRay");                                                               
 extern fn void draw_grid(int slices, float spacing) @extern("DrawGrid");                                                        
+
+extern fn Model load_model(char *fileName) @extern("LoadModel");                                                
+extern fn Model load_model_from_mesh(Mesh mesh) @extern("LoadModelFromMesh");                                            
+extern fn bool is_model_ready(Model model) @extern("IsModelReady");                                               
+extern fn void unload_model(Model model) @extern("UnloadModel");                                               
+extern fn BoundingBox get_model_bounding_box(Model model) @extern("GetModelBoundingBox");                               
