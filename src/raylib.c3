@@ -1019,3 +1019,19 @@ extern fn int get_codepoint(char *text, int *codepointSize) @extern("GetCodepoin
 extern fn int get_codepoint_next(char *text, int *codepointSize) @extern("GetCodepointNext");       
 extern fn int get_codepoint_previous(char *text, int *codepointSize) @extern("GetCodepointPrevious");  
 extern fn char *codepoint_to_utf8(int codepoint, int *utf8Size) @extern("CodepointToUTF8");
+
+extern fn int text_copy(char *dst, char *src) @extern("TextCopy");                                             
+extern fn bool text_is_equal(char *text1, char *text2) @extern("TextIsEqual");                              
+extern fn uint text_length(char *text) @extern("TextLength");                                          
+extern fn char *text_format(char *text, ...) @extern("TextFormat");                                     
+extern fn char *text_subtext(char *text, int position, int length) @extern("TextSubtext");              
+extern fn char *text_replace(char *text, char *replace, char *by) @extern("TextReplace");              
+extern fn char *text_insert(char *text, char *insert, int position) @extern("TextInsert");           
+extern fn char *text_join(char **textList, int count, char *delimiter) @extern("TextJoin"); 
+extern fn char **text_split(char *text, char delimiter, int *count) @extern("TextSplit");         
+extern fn void text_append(char *text, char *append, int *position) @extern("TextAppend");              
+extern fn int text_find_index(char *text, char *find) @extern("TextFindIndex");                      
+extern fn char *text_to_upper(char *text) @extern("TextToUpper");                   
+extern fn char *text_to_lower(char *text) @extern("TextToLower");                    
+extern fn char *text_to_pascal(char *text) @extern("TextToPascal");                    
+extern fn int text_to_integer(char *text) @extern("TextToInteger");                            
