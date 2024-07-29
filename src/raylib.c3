@@ -1009,3 +1009,13 @@ extern fn Vector2 measure_text_ex(Font font, char *text, float fontSize, float s
 extern fn int get_glyph_index(Font font, int codepoint) @extern("GetGlyphIndex");                                  
 extern fn Rectangle get_glyph_atlas_rec(Font font, int codepoint) @extern("GetGlyphAtlasRec");                        
 extern fn GlyphInfo get_glyph_info(Font font, int codepoint) @extern("GetGlyphInfo");                           
+
+extern fn char *load_utf8(int *codepoints, int length) @extern("LoadUTF8");                
+extern fn void unload_utf8(char *text) @extern("UnloadUTF8");                               
+extern fn int *load_codepoints(char *text, int *count) @extern("LoadCodepoints");              
+extern fn void unload_codepoints(int *codepoints) @extern("UnloadCodepoints");                  
+extern fn int get_codepoint_count(char *text) @extern("GetCodepointCount");                      
+extern fn int get_codepoint(char *text, int *codepointSize) @extern("GetCodepoint");      
+extern fn int get_codepoint_next(char *text, int *codepointSize) @extern("GetCodepointNext");       
+extern fn int get_codepoint_previous(char *text, int *codepointSize) @extern("GetCodepointPrevious");  
+extern fn char *codepoint_to_utf8(int codepoint, int *utf8Size) @extern("CodepointToUTF8");
