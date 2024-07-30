@@ -1063,3 +1063,12 @@ extern fn Model load_model_from_mesh(Mesh mesh) @extern("LoadModelFromMesh");
 extern fn bool is_model_ready(Model model) @extern("IsModelReady");                                               
 extern fn void unload_model(Model model) @extern("UnloadModel");                                               
 extern fn BoundingBox get_model_bounding_box(Model model) @extern("GetModelBoundingBox");                               
+
+extern fn void draw_model(Model model, Vector3 position, float scale, Color tint) @extern("DrawModel");             
+extern fn void draw_model_ex(Model model, Vector3 position, Vector3 rotationAxis, float rotationAngle, Vector3 scale, Color tint) @extern("DrawModelEx"); 
+extern fn void draw_model_wires(Model model, Vector3 position, float scale, Color tint) @extern("DrawModelWires");         
+extern fn void draw_model_wires_ex(Model model, Vector3 position, Vector3 rotationAxis, float rotationAngle, Vector3 scale, Color tint) @extern("DrawModelWiresEx"); 
+extern fn void draw_bounding_box(BoundingBox box, Color color) @extern("DrawBoundingBox");                                   
+extern fn void draw_billboard(Camera camera, Texture2D texture, Vector3 position, float size, Color tint) @extern("DrawBillboard");   
+extern fn void draw_billboard_rec(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector2 size, Color tint) @extern("DrawBillboardRec"); 
+extern fn void draw_billboard_pro(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector3 up, Vector2 size, Vector2 origin, float rotation, Color tint) @extern("DrawBillboardRec"); 

@@ -68,7 +68,7 @@ Raylib bindings for the C3 programming language. (WIP)
 - [ ] rmodels
     - [x] basic 3d shape functions
     - [x] model management functions
-    - [ ] model drawing functions 
+    - [x] model drawing functions 
     - [ ] mesh management functions
     - [ ] mesh generation functions
     - [ ] material loading/unloading functions 
