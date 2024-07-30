@@ -537,6 +537,8 @@ def SaveFileDataCallback = fn bool(char *filename, void *data, int dataSize);
 def LoadFileTextCallback = fn char*(char *fileName);            
 def SaveFileTextCallback = fn bool(char *filename, char *text);
 
+def AudioCallback = fn void(void *bufferData, uint frames);
+
 const int RAYLIB_VERSION_PATCH = 0;
 const int RAYLIB_VERSION_MAJOR = 5;
 const int RAYLIB_VERSION_MINOR = 5;
@@ -1115,3 +1117,9 @@ extern fn RayCollision get_ray_collision_box(Ray ray, BoundingBox box) @extern("
 extern fn RayCollision get_ray_collision_mesh(Ray ray, Mesh mesh, Matrix transform) @extern("GetRayCollisionMesh");                     
 extern fn RayCollision get_ray_collision_triangle(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3) @extern("GetRayCollisionTriangle");           
 extern fn RayCollision get_ray_collision_quad(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4) @extern("GetRayCollisionQuad");    
+
+extern fn void init_audio_device() @extern("InitAudioDevice");                                     
+extern fn void close_audio_device() @extern("CloseAudioDevice");                                   
+extern fn bool is_audio_device_ready() @extern("IsAudioDeviceReady");                                
+extern fn void set_master_volume(float volume) @extern("SetMasterVolume");                      
+extern fn float get_master_volume() @extern("GetMasterVolume");                                
