@@ -561,7 +561,7 @@ def RenderTexture2D = RenderTexture;
 
 def Camera = Camera3D;
 
-// TODO: TraceLogCallback // va_list?
+def TraceLogCallback = fn void(int logLevel, char *text, ...);
 def LoadFileDataCallback = fn char*(char *filename, int *dataSize);
 def SaveFileDataCallback = fn bool(char *filename, void *data, int dataSize);
 def LoadFileTextCallback = fn char*(char *fileName);            
@@ -734,7 +734,7 @@ extern fn void *mem_alloc(uint size) @extern("MemAlloc");
 extern fn void *mem_realloc(void *ptr, uint size) @extern("MemRealloc");            
 extern fn void mem_free(void *ptr) @extern("MemFree");                          
 
-// extern fn void set_trace_log_callback(TraceLogCallback callback) @extern("SetTraceLogCallback"); // TODO: TraceLogCallback macro (124)
+extern fn void set_trace_log_callback(TraceLogCallback callback) @extern("SetTraceLogCallback"); 
 extern fn void set_load_file_data_callback(LoadFileDataCallback callback) @extern("SetLoadFileDataCallback"); 
 extern fn void set_save_file_data_callback(SaveFileDataCallback callback) @extern("SetSaveFileDataCallback");
 extern fn void set_load_file_text_callback(LoadFileTextCallback callback) @extern("SetLoadFileTextCallback");
