@@ -1123,3 +1123,17 @@ extern fn void close_audio_device() @extern("CloseAudioDevice");
 extern fn bool is_audio_device_ready() @extern("IsAudioDeviceReady");                                
 extern fn void set_master_volume(float volume) @extern("SetMasterVolume");                      
 extern fn float get_master_volume() @extern("GetMasterVolume");                                
+
+extern fn Wave load_wave(char *fileName) @extern("LoadWave");                            
+extern fn Wave load_wave_from_memory(char *fileType, char *fileData, int dataSize) @extern("LoadWaveFromMemory"); 
+extern fn bool is_wave_ready(Wave wave) @extern("IsWaveReady");                           
+extern fn Sound load_sound(char *fileName) @extern("LoadSound");                        
+extern fn Sound load_sound_from_wave(Wave wave) @extern("LoadSoundFromWave");                      
+extern fn Sound load_sound_alias(Sound source) @extern("LoadSoundAlias");                       
+extern fn bool is_sound_ready(Sound sound) @extern("IsSoundReady");                            
+extern fn void update_sound(Sound sound, void *data, int sampleCount) @extern("UpdateSound"); 
+extern fn void unload_wave(Wave wave) @extern("UnloadWave");                           
+extern fn void unload_sound(Sound sound) @extern("UnloadSound");                         
+extern fn void unload_sound_alias(Sound alias) @extern("UnloadSoundAlias");                     
+extern fn bool export_wave(Wave wave, char *fileName) @extern("ExportWave");              
+extern fn bool export_wave_as_code(Wave wave, char *fileName) @extern("ExportWaveAsCode");         

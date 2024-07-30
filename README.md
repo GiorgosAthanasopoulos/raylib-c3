@@ -76,7 +76,7 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] collision detection functions
 - [ ] raudio
     - [x] audio device management functions
-    - [ ] wave/sound loading/unloading functions
+    - [x] wave/sound loading/unloading functions
     - [ ] wave/sound management functions
     - [ ] music management functions
     - [ ] audiostream management functions
