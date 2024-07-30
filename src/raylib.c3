@@ -1081,3 +1081,15 @@ extern fn void draw_mesh_instanced(Mesh mesh, Material material, Matrix *transfo
 extern fn bool export_mesh(Mesh mesh, char *fileName) @extern("ExportMesh");                                    
 extern fn BoundingBox get_mesh_bounding_box(Mesh mesh) @extern("GetMeshBoundingBox");                                    
 extern fn void get_mesh_tangents(Mesh *mesh) @extern("GetMeshTangents");                                            
+
+extern fn Mesh gen_mesh_poly(int sides, float radius) @extern("GenMeshPoly");                                         
+extern fn Mesh gen_mesh_plane(float width, float length, int resX, int resZ) @extern("GenMeshPlane");                   
+extern fn Mesh gen_mesh_cube(float width, float height, float length) @extern("GenMeshCube");                           
+extern fn Mesh gen_mesh_sphere(float radius, int rings, int slices) @extern("GenMeshSphere");                              
+extern fn Mesh gen_mesh_hemisphere(float radius, int rings, int slices) @extern("GenMeshHemisphere");                        
+extern fn Mesh gen_mesh_cylinder(float radius, float height, int slices) @extern("GenMeshCylinder");                      
+extern fn Mesh gen_mesh_cone(float radius, float height, int slices) @extern("GenMeshCone");                         
+extern fn Mesh gen_mesh_torus(float radius, float size, int radSeg, int sides) @extern("GenMeshTorus");              
+extern fn Mesh gen_mesh_knot(float radius, float size, int radSeg, int sides) @extern("GenMeshKnot");              
+extern fn Mesh gen_mesh_heightmap(Image heightmap, Vector3 size) @extern("GenMeshHeightmap");
+extern fn Mesh gen_mesh_cubicmap(Image cubicmap, Vector3 cubeSize) @extern("GenMeshCubicmap");                       
