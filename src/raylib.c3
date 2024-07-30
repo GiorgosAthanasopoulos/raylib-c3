@@ -1137,3 +1137,17 @@ extern fn void unload_sound(Sound sound) @extern("UnloadSound");
 extern fn void unload_sound_alias(Sound alias) @extern("UnloadSoundAlias");                     
 extern fn bool export_wave(Wave wave, char *fileName) @extern("ExportWave");              
 extern fn bool export_wave_as_code(Wave wave, char *fileName) @extern("ExportWaveAsCode");         
+
+extern fn void play_sound(Sound sound) @extern("PlaySound");                         
+extern fn void stop_sound(Sound sound) @extern("StopSound");                          
+extern fn void pause_sound(Sound sound) @extern("PauseSound");                          
+extern fn void resume_sound(Sound sound) @extern("ResumeSound");                          
+extern fn bool is_sound_playing(Sound sound) @extern("IsSoundPlaying");                        
+extern fn void set_sound_volume(Sound sound, float volume) @extern("SetSoundVolume");           
+extern fn void set_sound_pitch(Sound sound, float pitch) @extern("SetSoundPitch");              
+extern fn void set_sound_pan(Sound sound, float pan) @extern("SetSoundPan");                   
+extern fn Wave wave_copy(Wave wave) @extern("WaveCopy");                                    
+extern fn void wave_crop(Wave *wave, int initSample, int finalSample) @extern("WaveCrop");   
+extern fn void wave_format(Wave *wave, int sampleRate, int sampleSize, int channels) @extern("WaveFormat"); 
+extern fn float *load_wave_samples(Wave wave) @extern("LoadWaveSamples");                             
+extern fn void unload_wave_samples(float *samples) @extern("UnloadWaveSamples");                         
