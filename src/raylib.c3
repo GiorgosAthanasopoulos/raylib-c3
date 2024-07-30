@@ -1151,3 +1151,20 @@ extern fn void wave_crop(Wave *wave, int initSample, int finalSample) @extern("W
 extern fn void wave_format(Wave *wave, int sampleRate, int sampleSize, int channels) @extern("WaveFormat"); 
 extern fn float *load_wave_samples(Wave wave) @extern("LoadWaveSamples");                             
 extern fn void unload_wave_samples(float *samples) @extern("UnloadWaveSamples");                         
+
+extern fn Music load_music_stream(char *fileName) @extern("LoadMusicStream");                    
+extern fn Music load_music_stream_from_memory(char *fileType, char *data, int dataSize) @extern("LoadMusicStreamFromMemory"); 
+extern fn bool is_music_ready(Music music) @extern("IsMusicReady");                    
+extern fn void unload_music_stream(Music music) @extern("UnloadMusicStream");                
+extern fn void play_music_stream(Music music) @extern("PlayMusicStream");                   
+extern fn bool is_music_stream_playing(Music music) @extern("IsMusicStreamPlaying");               
+extern fn void update_music_stream(Music music) @extern("UpdateMusicStream");                   
+extern fn void stop_music_stream(Music music) @extern("StopMusicStream");                      
+extern fn void pause_music_stream(Music music) @extern("PauseMusicStream");                      
+extern fn void resume_music_stream(Music music) @extern("ResumeMusicStream");                      
+extern fn void seek_music_stream(Music music, float position) @extern("SeekMusicStream");         
+extern fn void set_music_volume(Music music, float volume) @extern("SetMusicVolume");             
+extern fn void set_music_pitch(Music music, float pitch) @extern("SetMusicPitch");                
+extern fn void set_music_pan(Music music, float pan) @extern("SetMusicPan");                     
+extern fn float get_music_time_length(Music music) @extern("GetMusicTimeLength");                         
+extern fn float get_music_time_played(Music music) @extern("GetMusicTimePlayed");                          
