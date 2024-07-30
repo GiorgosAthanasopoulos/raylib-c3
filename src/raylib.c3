@@ -1072,3 +1072,12 @@ extern fn void draw_bounding_box(BoundingBox box, Color color) @extern("DrawBoun
 extern fn void draw_billboard(Camera camera, Texture2D texture, Vector3 position, float size, Color tint) @extern("DrawBillboard");   
 extern fn void draw_billboard_rec(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector2 size, Color tint) @extern("DrawBillboardRec"); 
 extern fn void draw_billboard_pro(Camera camera, Texture2D texture, Rectangle source, Vector3 position, Vector3 up, Vector2 size, Vector2 origin, float rotation, Color tint) @extern("DrawBillboardRec"); 
+
+extern fn void upload_mesh(Mesh *mesh, bool dynamic) @extern("UploadMesh");                                         
+extern fn void update_mesh_buffer(Mesh mesh, int index, void *data, int dataSize, int offset) @extern("UpdateMeshBuffer");
+extern fn void unload_mesh(Mesh mesh) @extern("UnloadMesh");                                                      
+extern fn void draw_mesh(Mesh mesh, Material material, Matrix transform) @extern("DrawMesh");                  
+extern fn void draw_mesh_instanced(Mesh mesh, Material material, Matrix *transforms, int instances) @extern("DrawMeshInstanced"); 
+extern fn bool export_mesh(Mesh mesh, char *fileName) @extern("ExportMesh");                                    
+extern fn BoundingBox get_mesh_bounding_box(Mesh mesh) @extern("GetMeshBoundingBox");                                    
+extern fn void get_mesh_tangents(Mesh *mesh) @extern("GetMeshTangents");                                            
