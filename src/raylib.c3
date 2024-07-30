@@ -1106,3 +1106,12 @@ extern fn void update_model_animation(Model model, ModelAnimation anim, int fram
 extern fn void unload_model_animation(ModelAnimation anim) @extern("UnloadModelAnimation");                                     
 extern fn void unload_model_animations(ModelAnimation *animations, int animCount) @extern("UnloadModelAnimations");               
 extern fn bool is_model_animaton_valid(Model model, ModelAnimation anim) @extern("IsModelAnimationValid");                         
+
+extern fn bool check_collision_spheres(Vector3 center1, float radius1, Vector3 center2, float radius2) @extern("CheckCollisionSpheres");   
+extern fn bool check_collision_boxes(BoundingBox box1, BoundingBox box2) @extern("CheckCollisionBoxes");                           
+extern fn bool check_collision_box_sphere(BoundingBox box, Vector3 center, float radius) @extern("CheckCollisionBoxSphere");             
+extern fn RayCollision get_ray_collision_sphere(Ray ray, Vector3 center, float radius) @extern("GetRayCollisionSphere");                
+extern fn RayCollision get_ray_collision_box(Ray ray, BoundingBox box) @extern("GetRayCollisionBox");                                 
+extern fn RayCollision get_ray_collision_mesh(Ray ray, Mesh mesh, Matrix transform) @extern("GetRayCollisionMesh");                     
+extern fn RayCollision get_ray_collision_triangle(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3) @extern("GetRayCollisionTriangle");           
+extern fn RayCollision get_ray_collision_quad(Ray ray, Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4) @extern("GetRayCollisionQuad");    
