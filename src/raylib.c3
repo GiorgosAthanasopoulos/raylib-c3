@@ -120,10 +120,40 @@ struct Wave {
     uint frameCount, sampleRate, sampleSize, channels;
     void *data;
 }
-struct AudioStream {
-    // TODO: implement rlaudio
-    uint sampleRate, sampleSize, channels;
+struct AudioBuffer {
+    // ma_data_converter converter;
 
+    AudioCallback callback;        
+    AudioProcessor *processor;     
+
+    float volume;             
+    float pitch;               
+    float pan;                  
+
+    bool playing;                
+    bool paused;                  
+    bool looping;                  
+    int usage;                      
+
+    bool [2]isSubBufferProcessed;
+    uint sizeInFrames;   
+    uint frameCursorPos;  
+    uint framesProcessed;  
+
+    char *data;            
+
+    AudioBuffer *next;
+    AudioBuffer *prev;
+}
+struct AudioProcessor {
+    AudioCallback process;
+    AudioProcessor *next;
+    AudioProcessor *prev;
+}
+struct AudioStream {
+    AudioBuffer *buffer;
+    AudioProcessor *processor;
+    uint sampleRate, sampleSize, channels;
 }
 struct Sound {
     AudioStream sound;
@@ -1168,3 +1198,25 @@ extern fn void set_music_pitch(Music music, float pitch) @extern("SetMusicPitch"
 extern fn void set_music_pan(Music music, float pan) @extern("SetMusicPan");                     
 extern fn float get_music_time_length(Music music) @extern("GetMusicTimeLength");                         
 extern fn float get_music_time_played(Music music) @extern("GetMusicTimePlayed");                          
+
+extern fn AudioStream load_audio_stream(uint sampleRate, uint sampleSize, uint channels) @extern("LoadAudioStream"); 
+extern fn bool is_audio_stream_ready(AudioStream stream) @extern("IsAudioStreamReady");                    
+extern fn void unload_audio_stream(AudioStream stream) @extern("UnloadAudioStream");                    
+extern fn void update_audio_stream(AudioStream stream, void *data, int frameCount) @extern("UpdateAudioStream"); 
+extern fn bool is_audio_stream_processed(AudioStream stream) @extern("IsAudioStreamProcessed");                
+extern fn void play_audio_stream(AudioStream stream) @extern("PlayAudioStream");                      
+extern fn void pause_audio_stream(AudioStream stream) @extern("PauseAudioStream");                    
+extern fn void resume_audio_stream(AudioStream stream) @extern("ResumeAudioStream");                  
+extern fn bool is_audio_stream_playing(AudioStream stream) @extern("IsAudioStreamPlaying");              
+extern fn void stop_audio_stream(AudioStream stream) @extern("StopAudioStream");                  
+extern fn void set_audio_stream_volume(AudioStream stream, float volume) @extern("SetAudioStreamVolume");    
+extern fn void set_audio_stream_pitch(AudioStream stream, float pitch) @extern("SetAudioStreamPitch");     
+extern fn void set_audio_stream_pan(AudioStream stream, float pan) @extern("SetAudioStreamPan");        
+extern fn void set_audio_stream_buffer_size_default(int size) @extern("SetAudioStreamBufferSizeDefault");              
+extern fn void set_audio_stream_callback(AudioStream stream, AudioCallback callback) @extern("SetAudioStreamCallback"); 
+
+extern fn void attach_audio_stream_processor(AudioStream stream, AudioCallback processor) @extern("AttachAudioStreamProcessor"); 
+extern fn void detach_audio_stream_processor(AudioStream stream, AudioCallback processor) @extern("DetachAudioStreamProcessor");
+
+extern fn void attach_audio_mixer_processor(AudioCallback processor) @extern("AttachAudioMixerProcessor"); 
+extern fn void detach_audio_mixer_processor(AudioCallback processor) @extern("DetachAudioMixerProcessor");

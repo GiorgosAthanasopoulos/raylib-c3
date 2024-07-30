@@ -79,4 +79,4 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] wave/sound loading/unloading functions
     - [x] wave/sound management functions
     - [x] music management functions
-    - [ ] audiostream management functions
+    - [x] audiostream management functions
