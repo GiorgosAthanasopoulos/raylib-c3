@@ -1093,3 +1093,10 @@ extern fn Mesh gen_mesh_torus(float radius, float size, int radSeg, int sides) @
 extern fn Mesh gen_mesh_knot(float radius, float size, int radSeg, int sides) @extern("GenMeshKnot");              
 extern fn Mesh gen_mesh_heightmap(Image heightmap, Vector3 size) @extern("GenMeshHeightmap");
 extern fn Mesh gen_mesh_cubicmap(Image cubicmap, Vector3 cubeSize) @extern("GenMeshCubicmap");                       
+
+extern fn Material *load_materials(char *fileName, int *materialCount) @extern("LoadMaterials");                    
+extern fn Material load_material_default() @extern("LoadMaterialDefault");                                                
+extern fn bool is_material_ready(Material material) @extern("IsMaterialReady");                                            
+extern fn void unload_material(Material material) @extern("UnloadMaterial");                                              
+extern fn void set_material_texture(Material *material, int mapType, Texture2D texture) @extern("SetMaterialTexture");          
+extern fn void set_model_mesh_material(Model *model, int meshId, int materialId) @extern("SetModelMeshMaterial");           
