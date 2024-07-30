@@ -72,7 +72,7 @@ Raylib bindings for the C3 programming language. (WIP)
     - [x] mesh management functions
     - [x] mesh generation functions
     - [x] material loading/unloading functions 
-    - [ ] model animations loading/unloading functions
+    - [x] model animations loading/unloading functions
     - [ ] collision detection functions
 - [ ] raudio
     - [ ] audio device management functions

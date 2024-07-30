@@ -1100,3 +1100,9 @@ extern fn bool is_material_ready(Material material) @extern("IsMaterialReady");
 extern fn void unload_material(Material material) @extern("UnloadMaterial");                                              
 extern fn void set_material_texture(Material *material, int mapType, Texture2D texture) @extern("SetMaterialTexture");          
 extern fn void set_model_mesh_material(Model *model, int meshId, int materialId) @extern("SetModelMeshMaterial");           
+
+extern fn ModelAnimation *load_model_animations(char *fileName, int *animCount) @extern("LoadModelAnimations");            
+extern fn void update_model_animation(Model model, ModelAnimation anim, int frame) @extern("UpdateModelAnimation");            
+extern fn void unload_model_animation(ModelAnimation anim) @extern("UnloadModelAnimation");                                     
+extern fn void unload_model_animations(ModelAnimation *animations, int animCount) @extern("UnloadModelAnimations");               
+extern fn bool is_model_animaton_valid(Model model, ModelAnimation anim) @extern("IsModelAnimationValid");                         
