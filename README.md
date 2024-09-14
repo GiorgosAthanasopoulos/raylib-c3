@@ -13,6 +13,8 @@ Raylib bindings for the C3 programming language. (Complete)
 - Link with raylib lib: ```c3c compile -l /usr/lib/libraylib.so my_file.c3 raylib.c3```
 - Profit!
 
+(TIP: if you want to use a shorter alias, for example `rl` just rename the module declaration in raylib.c3 to `module rl`, and use it as `import rl; ... rl::init_window(...);` in your file.)
+
 # Example
 
 - See `src/main.c3` and `makefile` (for building) for an example on how to use the library.
