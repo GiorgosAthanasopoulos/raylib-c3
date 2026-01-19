@@ -577,6 +577,7 @@ const DEG2RAD = PI/180.0f;
 const float PI = 3.14159265358979323846f;
 const float RAD2DEG = 180.0f/PI;
 const Color LIGHTRAY = {200, 200, 200, 255};
+const Color LIGHTGRAY = {130, 130, 130, 255};
 const Color GRAY = {130, 130, 130, 255};
 const Color DARKGRAY= {80, 80, 80, 255};
 const Color YELLOW = {253, 249, 0, 255};
