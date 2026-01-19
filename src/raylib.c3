@@ -548,26 +548,26 @@ enum NPathLayout: int(int num) {
     NPATCH_THREE_PATCH_HORIZONTAL = 2,
 }
 
-def Vector2 = float[<2>];
-def Vector3 = float[<3>];
-def Vector4 = float[<4>];
-def Quaternion = Vector4;
+alias Vector2 = float[<2>];
+alias Vector3 = float[<3>];
+alias Vector4 = float[<4>];
+alias Quaternion = Vector4;
 
-def Color = char[<4>];
+alias Color = char[<4>];
 
-def Texture2D = Texture;
-def TextureCubemap = Texture;
-def RenderTexture2D = RenderTexture;
+alias Texture2D = Texture;
+alias TextureCubemap = Texture;
+alias RenderTexture2D = RenderTexture;
 
-def Camera = Camera3D;
+alias Camera = Camera3D;
 
-def TraceLogCallback = fn void(int logLevel, char *text, ...);
-def LoadFileDataCallback = fn char*(char *filename, int *dataSize);
-def SaveFileDataCallback = fn bool(char *filename, void *data, int dataSize);
-def LoadFileTextCallback = fn char*(char *fileName);            
-def SaveFileTextCallback = fn bool(char *filename, char *text);
+alias TraceLogCallback = fn void(int logLevel, char *text, ...);
+alias LoadFileDataCallback = fn char*(char *filename, int *dataSize);
+alias SaveFileDataCallback = fn bool(char *filename, void *data, int dataSize);
+alias LoadFileTextCallback = fn char*(char *fileName);
+alias SaveFileTextCallback = fn bool(char *filename, char *text);
 
-def AudioCallback = fn void(void *bufferData, uint frames);
+alias AudioCallback = fn void(void *bufferData, uint frames);
 
 const int RAYLIB_VERSION_PATCH = 0;
 const int RAYLIB_VERSION_MAJOR = 5;
@@ -1164,7 +1164,7 @@ extern fn bool is_sound_ready(Sound sound) @extern("IsSoundReady");
 extern fn void update_sound(Sound sound, void *data, int sampleCount) @extern("UpdateSound"); 
 extern fn void unload_wave(Wave wave) @extern("UnloadWave");                           
 extern fn void unload_sound(Sound sound) @extern("UnloadSound");                         
-extern fn void unload_sound_alias(Sound alias) @extern("UnloadSoundAlias");                     
+extern fn void unload_sound_alias(Sound salias) @extern("UnloadSoundAlias");
 extern fn bool export_wave(Wave wave, char *fileName) @extern("ExportWave");              
 extern fn bool export_wave_as_code(Wave wave, char *fileName) @extern("ExportWaveAsCode");         
 
