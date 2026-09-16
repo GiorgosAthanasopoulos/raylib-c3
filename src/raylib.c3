@@ -44,10 +44,13 @@ struct Font {
 }
 
 struct Camera3D {
-    Vector3 pos;
+    Vector3 position;
+    Vector3 target;
+    Vector3 up;
     float fovy;
     int projection;
 }
+
 struct Camera2D {
     Vector2 offset, target;
     float rotation, zoom;
